@@ -4,7 +4,6 @@ import { CardType } from '../../types';
 interface CardProps {
     card: CardType;
     revealed: boolean;
-    index: number;
     style?: React.CSSProperties;
 }
 

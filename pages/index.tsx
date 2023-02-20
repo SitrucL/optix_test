@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
 
                 <Deck deck={deck} revealed={revealAll} />
-                <div className="mt-96 justify-center flex align-middle">{dealtCard && <Card card={dealtCard} revealed={true} index={0} />}</div>
+                <div className="mt-96 justify-center flex align-middle">{dealtCard && <Card card={dealtCard} revealed={true} />}</div>
             </div>
         </>
     );

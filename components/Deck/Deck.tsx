@@ -13,7 +13,6 @@ const Deck = ({ deck, revealed }: DeckProps) => {
             {deck.map((card, index) => (
                 <Card
                     key={index}
-                    index={index}
                     card={card}
                     revealed={revealed ? true : false}
                     style={{
