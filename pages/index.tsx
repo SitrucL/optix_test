@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Deck } from '../components';
 import { Rank, Suit, CardType } from '../types';
 
