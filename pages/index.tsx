@@ -72,7 +72,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="flex max-w-5xl mx-auto flex-col items-center justify-start py-2 min-h-screen bg-red-300">
+            <div className="flex max-w-5xl mx-auto flex-col items-center justify-start py-2 min-h-screen ">
                 <div className="font-bold my-6">Remaining Card Count: {deck.length}</div>
 
                 <div>
