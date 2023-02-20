@@ -13,7 +13,6 @@ To install the project, make sure you have Node.js version 16 installed on your 
 
 1. Clone this repository to your local machine.
 2. Run `npm install` to install the project dependencies.
-3. [Add any other installation instructions if necessary.]
 
 ## Usage
 
