@@ -46,6 +46,7 @@ export default function Home() {
         setRevealAll(false);
     };
 
+    // inspired by this SO answer: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
     const handleShuffle = () => {
         const array = [...deck];
         for (let i = array.length - 1; i > 0; i--) {
@@ -62,7 +63,6 @@ export default function Home() {
         const dealtCard = newDeck.pop();
         setRevealAll(false);
 
-        //TODO: handle when deck is empty
         setDeck(newDeck);
         if (dealtCard) setDealtCard(dealtCard);
     };
@@ -80,11 +80,11 @@ export default function Home() {
                 <div>
                     <Button text={'Shuffle'} onClick={handleShuffle} color={'blue'} disabled={deck.length != 52} />
                     <Button text={'Restart'} onClick={handleReset} color={'red'} />
-                    <Button text={'Deal'} onClick={handleDealCard} color={'green'} />
+                    <Button text={'Deal'} disabled={deck.length === 0} onClick={handleDealCard} color={'green'} />
                 </div>
 
                 <Deck deck={deck} revealed={revealAll} />
-                <div className="mt-96">{dealtCard && <Card card={dealtCard} revealed={true} index={0} position={'block'} />}</div>
+                <div className="mt-96">{dealtCard && <Card card={dealtCard} revealed={true} index={0} />}</div>
             </div>
         </>
     );

@@ -9,9 +9,19 @@ interface DeckProps {
 
 const Deck = ({ deck, revealed }: DeckProps) => {
     return (
-        <div className="mt-28 self-start max-w-5xl">
+        <div className="mt-28 max-w-5xl relative flex justify-center">
             {deck.map((card, index) => (
-                <Card key={index} index={index} card={card} revealed={revealed ? true : false} position={`absolute`} />
+                <Card
+                    key={index}
+                    index={index}
+                    card={card}
+                    revealed={revealed ? true : false}
+                    style={{
+                        position: 'absolute',
+                        transform: `rotateZ(${Math.floor(Math.random() * 31) - 15}deg)`,
+                        zIndex: deck.length - index,
+                    }}
+                />
             ))}
         </div>
     );
