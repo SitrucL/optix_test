@@ -17,7 +17,6 @@ const Deck = ({ deck, revealed }: DeckProps) => {
                     card={card}
                     revealed={revealed ? true : false}
                     style={{
-                        position: 'absolute',
                         transform: `rotateZ(${Math.floor(Math.random() * 31) - 15}deg)`,
                         zIndex: deck.length - index,
                     }}

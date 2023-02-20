@@ -6,19 +6,19 @@ export enum Suit {
 }
 
 export enum Rank {
-    Two = 'Two',
-    Three = 'Three',
-    Four = 'Four',
-    Five = 'Five',
-    Six = 'Six',
-    Seven = 'Seven',
-    Eight = 'Eight',
-    Nine = 'Nine',
-    Ten = 'Ten',
-    Jack = 'Jack',
-    Queen = 'Queen',
-    King = 'King',
-    Ace = 'Ace',
+    Two = '2',
+    Three = '3',
+    Four = '4',
+    Five = '5',
+    Six = '6',
+    Seven = '7',
+    Eight = '8',
+    Nine = '9',
+    Ten = '10',
+    Jack = 'J',
+    Queen = 'Q',
+    King = 'K',
+    Ace = 'A',
 }
 
 export interface CardType {

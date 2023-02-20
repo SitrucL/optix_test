@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import Button from '../components/Button/Button';
-import Card from '../components/Card/Card';
-import Deck from '../components/Deck/Deck';
+import { Button, Card, Deck } from '../components';
 import { Rank, Suit, CardType } from '../types';
 
 const suits: Suit[] = [Suit.Hearts, Suit.Diamonds, Suit.Clubs, Suit.Spades];
@@ -75,7 +73,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="flex max-w-5xl mx-auto flex-col items-center justify-start py-2 min-h-screen bg-red-300">
-                <div>Remaining Card Count: {deck.length}</div>
+                <div className="font-bold my-6">Remaining Card Count: {deck.length}</div>
 
                 <div>
                     <Button text={'Shuffle'} onClick={handleShuffle} color={'blue'} disabled={deck.length != 52} />
@@ -84,7 +82,7 @@ export default function Home() {
                 </div>
 
                 <Deck deck={deck} revealed={revealAll} />
-                <div className="mt-96">{dealtCard && <Card card={dealtCard} revealed={true} index={0} />}</div>
+                <div className="mt-96 justify-center flex align-middle">{dealtCard && <Card card={dealtCard} revealed={true} index={0} />}</div>
             </div>
         </>
     );
