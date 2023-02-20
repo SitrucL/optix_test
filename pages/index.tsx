@@ -77,7 +77,7 @@ export default function Home() {
 
                 <div>
                     <Button text={'Shuffle'} onClick={handleShuffle} disabled={deck.length != 52} />
-                    <Button text={'Restart'} onClick={handleReset} />
+                    <Button text={'Restart'} onClick={handleReset} disabled={deck.length === 52} />
                     <Button text={'Deal'} disabled={deck.length === 0} onClick={handleDealCard} />
                 </div>
 
