@@ -72,17 +72,17 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="flex max-w-5xl mx-auto flex-col items-center justify-start py-2 min-h-screen ">
+            <div className="flex max-w-5xl mx-auto flex-col items-center justify-start py-2 min-h-screen my-10 ">
                 <div className="font-bold my-6">Remaining Card Count: {deck.length}</div>
 
                 <div>
-                    <Button text={'Shuffle'} onClick={handleShuffle} color={'blue'} disabled={deck.length != 52} />
-                    <Button text={'Restart'} onClick={handleReset} color={'red'} />
-                    <Button text={'Deal'} disabled={deck.length === 0} onClick={handleDealCard} color={'green'} />
+                    <Button text={'Shuffle'} onClick={handleShuffle} disabled={deck.length != 52} />
+                    <Button text={'Restart'} onClick={handleReset} />
+                    <Button text={'Deal'} disabled={deck.length === 0} onClick={handleDealCard} />
                 </div>
 
                 <Deck deck={deck} revealed={revealAll} />
-                <div className="mt-96 justify-center flex align-middle">{dealtCard && <Card card={dealtCard} revealed={true} />}</div>
+                <div className="mt-80 justify-center flex align-middle">{dealtCard && <Card card={dealtCard} revealed={true} />}</div>
             </div>
         </>
     );

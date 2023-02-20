@@ -4,12 +4,11 @@ interface ButtonProps {
     text: string;
     onClick: () => void;
     disabled?: boolean;
-    color: 'blue' | 'red' | 'green';
 }
 
-function Button({ text, onClick, color, disabled }: ButtonProps) {
+function Button({ text, onClick, disabled }: ButtonProps) {
     return (
-        <button disabled={disabled} className={`bg-${color}-500 disabled:bg-slate-400 text-white font-bold py-2 px-4 rounded`} onClick={onClick}>
+        <button disabled={disabled} className={`disabled:bg-slate-400 text-white font-bold py-2 px-4 rounded mx-2 bg-blue-400`} onClick={onClick}>
             {text}
         </button>
     );
