@@ -5,7 +5,6 @@ interface CardProps {
     card: CardType;
     revealed: boolean;
     index: number;
-
     style?: React.CSSProperties;
 }
 
@@ -51,7 +50,7 @@ const Card = ({ card, revealed, style }: CardProps) => {
             className={` p-2 h-[250px] w-[150px] bg-white border  border-gray-200 rounded-lg shadow hover:bg-gray-100   ${
                 revealed ? `bg-slate-50` : `bg-[url('/card-background.jpg')]`
             } bg-cover absolute
-            `}
+            ${suit === 'Hearts' || suit === 'Diamonds' ? 'text-red-500' : 'text-black'}`}
         >
             {revealed ? revealedCardContent : hiddenCardContent}
         </div>
